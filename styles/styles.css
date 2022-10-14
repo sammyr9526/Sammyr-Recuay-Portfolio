@@ -159,12 +159,12 @@ form {
   box-shadow: 0px 0px 10px rgb(97, 88, 88);
   outline: 0.1em solid rgb(102, 95, 95);
 }
-.form-control {
+.contact-form {
   background-color: black;
   color: white;
   outline: 0.1em solid rgb(102, 95, 95);
 }
-.form-control:focus {
+.contact-form:focus {
   background-color: black;
   color: white;
   outline: 0.1em solid rgb(102, 95, 95);

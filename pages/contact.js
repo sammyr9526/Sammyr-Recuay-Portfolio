@@ -17,7 +17,7 @@ const Contact = () => (
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="form-control shadow-none rounded"
+                  className="form-control contact-form shadow-none rounded"
                   id="floatingInput"
                   required
                 />
@@ -28,7 +28,7 @@ const Contact = () => (
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="form-control shadow-none  "
+                  className="form-control contact-form shadow-none  "
                   id="floatingEmail"
                   required
                 />
@@ -40,7 +40,7 @@ const Contact = () => (
                   cols="20"
                   rows="10"
                   placeholder="Message"
-                  className="form-control shadow-none"
+                  className="form-control contact-form shadow-none"
                   id="floatingMessage"
                   required
                 ></textarea>
