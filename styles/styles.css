@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.navbar-brand {
+  font-family: "Great Vibes", cursive;
+  font-size: xx-large;
+}
+.container {
+  margin-top: 140px;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.social {
+  position: fixed;
+  top: 35%;
+  width: 200px;
+  align-content: center;
+}
+.social_li {
+  position: relative;
+  width: 160px;
+  height: 56px;
+  margin-left: -140px;
+  transition: 0.5s;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.social_li:hover {
+  border-radius: 6px;
+  margin-left: -45px;
+}
+
+.social_a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about {
+  font-size: 20px;
+}
+
+code {
+  font-size: 65px;
+}
+
+.link {
+  margin: 0 5px;
+}
+
+.link {
+  text-decoration: none;
+  padding: 0.3rem 1.3rem;
+  font-size: 17px;
+
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.link::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: white;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.link:hover:after {
+  width: 100%;
+}
+
+.link:hover {
+  color: black;
+}
+
+.logo {
+  border-radius: 0.4em;
+}
+#bs {
+  box-shadow: 0 3px 4px 0 rebeccapurple;
+}
+
+#react {
+  box-shadow: 0 3px 4px 0 rgb(55, 195, 250);
+}
+
+#html {
+  box-shadow: 0 3px 4px 0 rgba(238, 86, 31, 0.952);
+}
+
+#mysql {
+  box-shadow: 0 3px 4px 0 orange;
+}
+
+#auth {
+  box-shadow: 0 3px 4px 0 rgb(255, 123, 0);
+}
+#dot {
+  box-shadow: 0 3px 4px 0 rgb(238, 203, 4);
+}
+#gith {
+  box-shadow: 0 3px 4px 0 white;
+}
+#css {
+  box-shadow: 0 3px 4px 0 rgb(37, 108, 241);
+}
+#js {
+  box-shadow: 0 3px 4px 0 rgb(255, 208, 0);
+}
+#next {
+  box-shadow: 0 3px 4px 0 white;
+}
+#node {
+  box-shadow: 0 3px 4px 0 rgb(114, 202, 92);
+}
+#tw {
+  box-shadow: 0 3px 4px 0 rgb(104, 179, 202);
+}
+
+#express {
+  box-shadow: 0 3px 4px 0 rgb(110, 126, 131);
+}
+
+#mongo {
+  box-shadow: 0 3px 4px 0 rgb(48, 134, 40);
+}
+
+#git {
+  box-shadow: 0 3px 4px 0 rgb(211, 71, 16);
+}
+
+.overflow {
+  height: 50%;
+}
+
+.overflow .card-img-top {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.overflow .card-img-top:hover {
+  transform: scale(1.15);
+  overflow: hidden;
+}
+
+#contact {
+  margin-bottom: 100px;
+}
+
+form {
+  box-shadow: 0px 0px 10px rgb(97, 88, 88);
+  background-color: black;
+  outline: 0.1em solid rgb(102, 95, 95);
+}
+.form-control::after {
+  background-color: black;
+}
+
+.form-control:enabled {
+  background-color: black;
+  color: white;
+  outline: 0.1em solid rgb(102, 95, 95);
+}
+
+.form-control::placeholder {
+  font-weight: 900;
+}
+#floatingMessage {
+  height: max-content;
+}
+.foot {
+  height: 150px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: x-large;
+  }
+  li {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  img {
+    width: 20px;
+    height: 30px;
+  }
+  .container {
+    margin-top: 120px;
+  }
+
+  .navigation {
+    position: relative;
+  }
+
+  code {
+    font-size: 43px;
+  }
+  h3 {
+    font-size: xx-large;
+  }
+}
