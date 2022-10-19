@@ -166,13 +166,10 @@ form {
   background-color: black;
   outline: 0.1em solid rgb(102, 95, 95);
 }
-.form-control {
-  color: white;
-  outline: 0.1em solid rgb(102, 95, 95);
-}
+.form-control,
 .form-control:focus {
   color: white;
-  outline: 0.1em solid rgb(134, 125, 125);
+  outline: 0.1em solid rgb(102, 95, 95);
 }
 
 .form-control::placeholder {
