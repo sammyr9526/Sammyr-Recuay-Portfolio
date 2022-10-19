@@ -46,7 +46,7 @@ const social = [
 
 const SocialLinks = () => {
   return (
-    <div className=" d-none d-md-block social ">
+    <div className=" d-none d-lg-block social ">
       <ul>
         {social.map(({ id, child, href, style }) => (
           <li

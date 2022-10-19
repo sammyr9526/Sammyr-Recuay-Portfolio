@@ -1,5 +1,8 @@
 import Layout from "../components/layout";
 import Image from "next/image";
+import { projects as proj } from "./projects";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import bootstrap from "../public/skills//bootstrap.png";
 import reacti from "../public/skills//react.png";
 import mySQL from "../public/skills//mySQL.png";
@@ -16,6 +19,25 @@ import mongo from "../public/skills//mongo.png";
 import git from "../public/skills//git.png";
 import express from "../public/skills//express.png";
 import prog from "../public/writingcode.jpg";
+
+export const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.75,
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+export const item = {
+  hidden: { opacity: 0 },
+  show: {
+    whileInView: 1,
+    opacity: 1,
+  },
+};
 
 const skills = [
   {
@@ -99,21 +121,27 @@ const skills = [
   },
 ];
 
-import { projects as proj } from "./projects";
-
 export default function Index() {
+  const [isInView, setIsInView] = useState(false);
+
   return (
     <Layout>
       {/* ABOUT */}
-      <div className="container text-center   ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="container text-center"
+      >
         <h3 className="">About Me</h3>
-        <div className="row mt-5 px-4 mx-auto text-start   ">
+        <div className="row mt-5 px-4 mx-auto about ">
           <div className="col-md-7 ">
             <h1 className="fw-bolder">
               <code className="text-dark"> Hello World</code>
             </h1>
 
-            <p className="about">
+            <p className="about_p">
               I'm Sammyr Recuay, a web developer from Peru. I'm very curious and
               passionate about everything related to computers and technology.
               <br />
@@ -123,7 +151,7 @@ export default function Index() {
               improve my skills
             </p>
           </div>
-          <div className="col-md-5 d-flex justify-content-center  ">
+          <div className="col-md-5 d-flex justify-content-center prog_img ">
             <Image
               src={prog}
               className="img-fluid rounded-circle"
@@ -132,36 +160,55 @@ export default function Index() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* SKILLS */}
       <div className=" container skills">
         <h3 className="mb-5 text-center">Skills</h3>
 
-        <div className="row   text-center grid justify-content-center     ">
+        <div className="row text-center grid justify-content-center     ">
           {skills.map(({ skill, src, id }) => (
             <div
               className="col-lg-3  me-3 col-4  mb-5 me-3 ms-3 logo"
               id={id}
               key={id}
             >
-              <Image src={src} alt="img" width={70} height={80} />
-              <p>{skill} </p>
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <Image src={src} alt="img" width={70} height={80} />
+                <p>{skill} </p>
+              </motion.div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Portfolio */}
-      <div className="container ">
+      <motion.div
+        className="container "
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <div className="  mb-5  ">
           <h3 className="text-center">Projects</h3>
           <div className="col-md-14 mt-5 ">
-            <div className="row text-center justify-content-center ">
+            <motion.div
+              whileInView={() => {
+                {
+                  setIsInView(true);
+                  return {};
+                }
+              }}
+              className="row text-center justify-content-center "
+              variants={container}
+              initial="hidden"
+              animate={isInView && "show"}
+            >
               {proj.slice(0, 6).map(({ web, git, src, pill }, index) => (
-                <div
+                <motion.div
                   className="col-sm-5  col-lg-3  me-3  mb-5 me-3 ms-3  col-9 overflow "
                   key={index}
+                  variants={item}
                 >
                   <div className="card h-100 ">
                     <Image src={src} alt="img" className="card-img-top" />
@@ -194,9 +241,9 @@ export default function Index() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
             <div className=" text-center">
               <a
                 href="/projects"
@@ -207,7 +254,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* CONTACT ME */}
 
@@ -226,7 +273,7 @@ export default function Index() {
                     type="text"
                     name="name"
                     placeholder="Name"
-                    className="form-control shadow-none rounded"
+                    className="form-control shadow-none rounded bg-light"
                     id="floatingInput"
                     required
                   />
@@ -237,7 +284,7 @@ export default function Index() {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    className="form-control shadow-none  "
+                    className="form-control shadow-none bg-light "
                     id="floatingEmail"
                     required
                   />
@@ -249,7 +296,7 @@ export default function Index() {
                     cols="20"
                     rows="10"
                     placeholder="Message"
-                    className="form-control shadow-none"
+                    className="form-control shadow-none bg-light"
                     id="floatingMessage"
                     required
                   ></textarea>

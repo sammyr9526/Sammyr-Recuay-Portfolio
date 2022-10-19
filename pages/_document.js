@@ -21,11 +21,6 @@ export default function Document() {
           integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
           crossOrigin="anonymous"
         ></script>
-
-        <script
-          src="https://kit.fontawesome.com/5e1fca7789.js"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
       <body>
         <Main />

@@ -1,8 +1,16 @@
 import Layout from "../components/layout";
+import { motion } from "framer-motion";
 
 const Contact = () => (
   <Layout>
-    <div className="container " id="contact">
+    <motion.div
+      className="container"
+      initial={{ scaleY: 0 }}
+      animate={{ scaleY: 1 }}
+      exit={{ scaleY: 0 }}
+      transition={[{ duration: 0.75 }, { delay: 5 }]}
+      id="contact"
+    >
       <div className="row justify-content-center text-center ">
         <h3>Contact Me</h3>
         <div className="col-md-6 col-lg-5 ">
@@ -17,7 +25,7 @@ const Contact = () => (
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="form-control contact-form shadow-none rounded"
+                  className="form-control contact-form shadow-none rounded bg-light"
                   id="floatingInput"
                   required
                 />
@@ -28,7 +36,7 @@ const Contact = () => (
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="form-control contact-form shadow-none  "
+                  className="form-control contact-form shadow-none bg-light  "
                   id="floatingEmail"
                   required
                 />
@@ -40,7 +48,7 @@ const Contact = () => (
                   cols="20"
                   rows="10"
                   placeholder="Message"
-                  className="form-control contact-form shadow-none"
+                  className="form-control contact-form shadow-none bg-light"
                   id="floatingMessage"
                   required
                 ></textarea>
@@ -56,7 +64,7 @@ const Contact = () => (
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   </Layout>
 );
 

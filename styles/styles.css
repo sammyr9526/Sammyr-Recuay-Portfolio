@@ -2,7 +2,6 @@
 
 .navbar-brand {
   font-family: "Great Vibes", cursive;
-  font-size: xx-large;
 }
 .container {
   margin-top: 140px;
@@ -41,6 +40,9 @@
   justify-content: space-between;
 }
 .about {
+  text-align: start;
+}
+.about_p {
   font-size: 20px;
 }
 
@@ -141,6 +143,10 @@ code {
   height: 50%;
 }
 
+.card {
+  outline: 0.1em solid rgb(134, 125, 125);
+}
+
 .overflow .card-img-top {
   transform: scale(1);
   transition: all 0.2s ease-in-out;
@@ -157,6 +163,7 @@ code {
 
 form {
   box-shadow: 0px 0px 10px rgb(97, 88, 88);
+  background-color: black;
   outline: 0.1em solid rgb(102, 95, 95);
 }
 .form-control {
@@ -184,7 +191,7 @@ input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .navbar-brand {
     font-size: x-large;
   }
@@ -192,6 +199,12 @@ input:-webkit-autofill:focus {
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
+  }
+  .about {
+    text-align: center;
+  }
+  .prog_img {
+    margin-top: 25px;
   }
   img {
     width: 20px;

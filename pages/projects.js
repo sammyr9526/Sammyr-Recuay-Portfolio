@@ -1,4 +1,5 @@
 import Layout from "../components/layout";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import bitcoin from "../public/projects/coin_market.JPG";
 import tasks from "../public/projects/react-typescript.JPG";
@@ -10,7 +11,7 @@ import paypal from "../public/projects/paypal.JPG";
 import product from "../public/projects/product.JPG";
 import crud from "../public/projects/react_crud.JPG";
 import pokedex from "../public/projects/pokedex.JPG";
-
+import { container, item } from "../pages/index";
 export const projects = [
   {
     web: "https://react-typescript-tasks.vercel.app/",
@@ -83,15 +84,27 @@ export const projects = [
 
 const Projects = () => (
   <Layout>
-    <div className="container">
+    <motion.div
+      className="container"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 3 }}
+    >
       <div className="  mb-5  ">
         <h3 className="text-center">Projects</h3>
         <div className="col-md-14 mt-5 ">
-          <div className="row text-center justify-content-center ">
+          <motion.div
+            className="row text-center justify-content-center "
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
             {projects.map(({ web, git, src, pill }, index) => (
-              <div
+              <motion.div
                 className="col-sm-5  col-lg-4 me-3  mb-5 me-3 ms-3  col-9 overflow "
                 key={index}
+                variants={item}
               >
                 <div className="card h-100  ">
                   <Image src={src} alt="img" className="card-img-top" />
@@ -124,12 +137,12 @@ const Projects = () => (
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   </Layout>
 );
 export default Projects;
