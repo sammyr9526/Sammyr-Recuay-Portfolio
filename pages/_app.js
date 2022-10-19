@@ -1,5 +1,5 @@
-import "bootswatch/dist/cyborg/bootstrap.min.css";
 import "../styles/styles.css";
+import "bootswatch/dist/cyborg/bootstrap.min.css";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {

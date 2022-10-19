@@ -51,7 +51,7 @@ const SocialLinks = () => {
         {social.map(({ id, child, href, style }) => (
           <li
             key={id}
-            className={"social_li d-flex  w-100   bg-light " + "" + style}
+            className={"social_li d-flex w-100 bg-light " + "" + style}
           >
             <a
               href={href}
