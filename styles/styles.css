@@ -4,7 +4,7 @@
   font-family: "Great Vibes", cursive;
 }
 .container {
-  margin-top: 140px;
+  margin-top: 75px;
 }
 
 .navigation {
@@ -172,7 +172,7 @@ form {
 }
 .form-control:focus {
   color: white;
-  outline: 0.1em solid rgb(134, 125, 125);
+  outline: 0.1em solid rgb(134, 125, 125) !important;
 }
 
 .form-control::placeholder {
@@ -209,7 +209,7 @@ input:-webkit-autofill:focus {
     height: 30px;
   }
   .container {
-    margin-top: 120px;
+    margin-top: 60px;
   }
 
   .navigation {
@@ -221,5 +221,8 @@ input:-webkit-autofill:focus {
   }
   h3 {
     font-size: xx-large;
+  }
+  #contact {
+    margin-bottom: 40px;
   }
 }
