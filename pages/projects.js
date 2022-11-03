@@ -83,7 +83,7 @@ export const projects = [
 ];
 
 const Projects = () => (
-  <Layout>
+  <>
     <motion.div
       className="container"
       initial={{ opacity: 0 }}
@@ -95,45 +95,49 @@ const Projects = () => (
         <h3 className="text-center">Projects</h3>
         <div className="col-md-14 mt-5 ">
           <motion.div
-            className="row text-center justify-content-center "
+            className="row text-center justify-content-center  "
             variants={container}
             initial="hidden"
             animate="show"
           >
             {projects.map(({ web, git, src, pill }, index) => (
               <motion.div
-                className="col-sm-5  col-lg-4 me-3  mb-5 me-3 ms-3  col-9 overflow "
+                className="card-group col-10 col-sm-8 col-md-5 col-lg-4 m-3 overflow"
                 key={index}
                 variants={item}
               >
-                <div className="card h-100  ">
+                <div className="card">
                   <Image src={src} alt="img" className="card-img-top" />
-                  <div className="card-body mt-1 mb-1  ">
-                    {pill.map((e) => (
-                      <div className="d-inline-flex" key={e}>
-                        <button
-                          className=" btn btn-primary btn-sm ms-1 me-1 mb-3   "
-                          disabled
+                  <div className="card-body">
+                    <div className=" h-50  ">
+                      {pill.map((e) => (
+                        <div className="d-inline-flex" key={e}>
+                          <button
+                            className=" btn btn-primary btn-sm ms-1 me-1 mb-3"
+                            disabled
+                          >
+                            {e}
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="h-50 d-flex justify-content-evenly">
+                      <div className="align-self-end">
+                        <a
+                          href={web}
+                          className="btn btn-outline-dark me-2 shadow-none"
+                          target={"_blank"}
                         >
-                          {e}
-                        </button>
+                          web
+                        </a>
+                        <a
+                          href={git}
+                          className="btn btn-outline-dark ms-2 shadow-none"
+                          target={"_blank"}
+                        >
+                          github
+                        </a>
                       </div>
-                    ))}
-                    <div>
-                      <a
-                        href={web}
-                        className="btn btn-outline-dark me-2 shadow-none"
-                        target={"_blank"}
-                      >
-                        web
-                      </a>
-                      <a
-                        href={git}
-                        className="btn btn-outline-dark ms-2 shadow-none"
-                        target={"_blank"}
-                      >
-                        github
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -143,6 +147,6 @@ const Projects = () => (
         </div>
       </div>
     </motion.div>
-  </Layout>
+  </>
 );
 export default Projects;

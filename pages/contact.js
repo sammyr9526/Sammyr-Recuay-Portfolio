@@ -1,19 +1,57 @@
-import Layout from "../components/layout";
-import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
-const Contact = () => (
-  <Layout>
+export default function Contact() {
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+  const inView = useInView(ref);
+  const inView2 = useInView(ref2);
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({
+        x: "-100%",
+      });
+    }
+    if (inView2) {
+      animation2.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 2,
+          delay: 4,
+          bounce: 0.3,
+        },
+      });
+    }
+
+    if (!inView2) {
+      animation2.start({
+        x: "-100%",
+      });
+    }
+  }, [inView, inView2]);
+  return (
     <motion.div
       className="container"
-      initial={{ scaleY: 0 }}
-      animate={{ scaleY: 1 }}
-      exit={{ scaleY: 0 }}
-      transition={[{ duration: 0.75 }, { delay: 5 }]}
+      ref={ref}
+      animate={animation}
       id="contact"
     >
       <div className="row justify-content-center text-center ">
         <h3>Contact Me</h3>
-        <div className="col-md-6 col-lg-5 ">
+        <div className="col-md-8 col-lg-5 text-start">
           <form
             className="card my-4  rounded text-start"
             action="https://getform.io/f/5fb0a6ee-c5d7-462a-8c01-c749438d81a2"
@@ -65,7 +103,5 @@ const Contact = () => (
         </div>
       </div>
     </motion.div>
-  </Layout>
-);
-
-export default Contact;
+  );
+}
