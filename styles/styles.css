@@ -173,6 +173,9 @@ form {
   color: white !important;
   outline: 0.1em solid rgb(158, 142, 142) !important;
 }
+.form-control:active {
+  color: white !important;
+}
 
 .form-control::placeholder {
   font-weight: 900;
@@ -201,7 +204,7 @@ input:-webkit-autofill:focus {
     text-align: center;
   }
   .prog_img {
-    margin-top: 25px;
+    margin-top: 25px !important;
   }
   img {
     width: 20px;
@@ -216,10 +219,10 @@ input:-webkit-autofill:focus {
   }
 
   code {
-    font-size: 43px;
+    font-size: 43px !important;
   }
   h3 {
-    font-size: xx-large;
+    font-size: xx-large !important;
   }
   #contact {
     margin-bottom: 40px;

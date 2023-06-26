@@ -125,11 +125,8 @@ const skills = [
 
 export default function Index() {
   const ref = useRef(null);
-  const ref2 = useRef(null);
   const inView = useInView(ref);
-  const inView2 = useInView(ref2);
   const animation = useAnimation();
-  const animation2 = useAnimation();
   useEffect(() => {
     if (inView) {
       animation.start({
@@ -146,7 +143,7 @@ export default function Index() {
         x: "-100%",
       });
     }
-  }, [inView, inView2]);
+  }, [inView]);
   return (
     <>
       {/* ABOUT */}
@@ -184,29 +181,27 @@ export default function Index() {
       </motion.div>
 
       {/* SKILLS */}
-      <motion.div
-        className=" container skills "
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: false }}
-      >
+      <div className=" container skills ">
         <h3 className="mb-5 text-center">Skills</h3>
 
         <motion.div className="row text-center grid justify-content-center     ">
           {skills.map(({ skill, src, id }) => (
-            <div
+            <motion.div
               className="col-lg-3  me-3 col-4  mb-5 me-3 ms-3 logo"
               id={id}
               key={id}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: false }}
             >
               <motion.div whileHover={{ scale: 1.2 }}>
                 <Image src={src} alt="img" width={70} height={80} />
                 <p>{skill} </p>
               </motion.div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Portfolio */}
       <motion.div className="container">

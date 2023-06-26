@@ -14,19 +14,42 @@ import pokedex from "../public/projects/pokedex.JPG";
 import { container, item } from "../pages/index";
 export const projects = [
   {
+    web: "https://react-fb-auth-26a23.firebaseapp.com/login",
+    git: "https://github.com/sammyr9526/react-fb-auth",
+    src: login,
+    pill: ["html", "css", "react", "firebase", "tailwind"],
+  },
+  {
+    web: "https://beststore.cyclic.app/",
+    git: "https://github.com/sammyr9526/BestStore-paypal",
+    src: paypal,
+    pill: ["html", "node", "express", "dotenv", "bootstrap"],
+  },
+  {
+    web: "https://mongo-tasks-crud.cyclic.app/",
+    git: "https://github.com/sammyr9526/Tasks-crud-node-mongodb",
+    src: task_mongo,
+    pill: ["html", "mongo", "express", "dotenv", "bootstrap"],
+  },
+  {
+    web: "https://sammyr9526.github.io/pokemon-app/",
+    git: "https://github.com/sammyr9526/pokemon-app",
+    src: pokedex,
+    pill: ["react", "javascript", "css"],
+  },
+
+  {
     web: "https://react-typescript-tasks.vercel.app/",
     git: "https://github.com/sammyr9526/react-typescript-tasks/",
     src: tasks,
     pill: ["html", "css", "react"],
   },
-
   {
     web: "https://sammyr9526.github.io/react-crypto-prices/",
     git: "https://github.com/sammyr9526/react-crypto-prices",
     src: bitcoin,
     pill: ["react", "bootstrap"],
   },
-
   {
     web: "https://sammyr9526.github.io/react-rick-and-morty/",
     git: "https://github.com/sammyr9526/react-rick-and-morty",
@@ -34,51 +57,22 @@ export const projects = [
     pill: ["react", "bootstrap"],
   },
   {
-    web: "https://react-fb-auth-26a23.firebaseapp.com/login",
-    git: "https://github.com/sammyr9526/react-fb-auth",
-    src: login,
-    pill: ["html", "css", "react", "firebase", "tailwind"],
+    web: "https://sammyr9526.github.io/react-crud-app/",
+    git: "https://github.com/sammyr9526/react-crud-app/",
+    src: crud,
+    pill: ["html", "css", "react"],
   },
-
-  {
-    web: "https://mongo-tasks-crud.cyclic.app/",
-    git: "https://github.com/sammyr9526/Tasks-crud-node-mongodb",
-    src: task_mongo,
-    pill: ["html", "mongo", "express", "dotenv", "bootstrap"],
-  },
-
-  {
-    web: "https://beststore.cyclic.app/",
-    git: "https://github.com/sammyr9526/BestStore-paypal",
-    src: paypal,
-    pill: ["html", "node", "express", "dotenv", "bootstrap"],
-  },
-
   {
     web: "https://sammyr9526.github.io/html-css-webpage/",
     git: "https://github.com/sammyr9526/html-css-webpage",
     src: phone,
     pill: ["html", "css", "javascript", "bootstrap"],
   },
-
-  {
-    web: "https://sammyr9526.github.io/react-crud-app/",
-    git: "https://github.com/sammyr9526/react-crud-app/",
-    src: crud,
-    pill: ["html", "css", "react"],
-  },
-
   {
     web: "https://sammyr9526.github.io/LandingPage_html/",
     git: "https://github.com/sammyr9526/LandingPage_html",
     src: product,
     pill: ["html", "css", "javascript", "bootstrap"],
-  },
-  {
-    web: "https://sammyr9526.github.io/pokemon-app/",
-    git: "https://github.com/sammyr9526/pokemon-app",
-    src: pokedex,
-    pill: ["react", "javascript", "css"],
   },
 ];
 

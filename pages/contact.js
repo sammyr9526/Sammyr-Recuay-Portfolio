@@ -2,50 +2,30 @@ import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Contact() {
-  const ref = useRef(null);
   const ref2 = useRef(null);
-  const inView = useInView(ref);
-  const inView2 = useInView(ref2);
-  const animation = useAnimation();
+  const inView2 = useInView(ref);
   const animation2 = useAnimation();
   useEffect(() => {
-    if (inView) {
-      animation.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
-    if (!inView) {
-      animation.start({
-        x: "-100%",
-      });
-    }
     if (inView2) {
       animation2.start({
         x: 0,
         transition: {
           type: "spring",
           duration: 2,
-          delay: 4,
           bounce: 0.3,
         },
       });
     }
-
     if (!inView2) {
       animation2.start({
         x: "-100%",
       });
     }
-  }, [inView, inView2]);
+  }, [inView2]);
   return (
     <motion.div
       className="container"
-      ref={ref}
+      ref={ref2}
       animate={animation}
       id="contact"
     >
