@@ -3,7 +3,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Contact() {
   const ref2 = useRef(null);
-  const inView2 = useInView(ref);
+  const inView2 = useInView(ref2);
   const animation2 = useAnimation();
   useEffect(() => {
     if (inView2) {
@@ -26,7 +26,7 @@ export default function Contact() {
     <motion.div
       className="container"
       ref={ref2}
-      animate={animation}
+      animate={animation2}
       id="contact"
     >
       <div className="row justify-content-center text-center ">
@@ -43,7 +43,7 @@ export default function Contact() {
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="form-control contact-form shadow-none rounded bg-light"
+                  className="form-control contact-form shadow-none rounded bg-light text-white"
                   id="floatingInput"
                   required
                 />
