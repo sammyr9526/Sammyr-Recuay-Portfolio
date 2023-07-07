@@ -22,19 +22,19 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto ">
             <li className="nav-item  ">
               <Link href="/">
-                <a className="link  " aria-current="page">
+                <a className="link fw-bolder" aria-current="page">
                   Home
                 </a>
               </Link>
             </li>
             <li className="nav-item  ">
               <Link href="/projects">
-                <a className="link">Projects</a>
+                <a className="link fw-bolder">Projects</a>
               </Link>
             </li>
             <li className="nav-item  ">
               <Link href="/contact">
-                <a className="link ">Contact</a>
+                <a className="link fw-bolder ">Contact</a>
               </Link>
             </li>
           </ul>

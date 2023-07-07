@@ -10,7 +10,7 @@ const social = [
         Linkedin <FaLinkedin size={30} className=" " />
       </>
     ),
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/sammyr-recuay-parra-74298a253/",
     style: "border-top: 6px",
   },
   {

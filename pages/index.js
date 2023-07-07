@@ -1,22 +1,7 @@
 import Image from "next/image";
-import { projects as proj } from "./projects";
-import { useState, useEffect, useRef } from "react";
+import { projects as proj, skills } from "./helpers";
+import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import bootstrap from "../public/skills//bootstrap.png";
-import reacti from "../public/skills//react.png";
-import mySQL from "../public/skills//mySQL.png";
-import html from "../public/skills//html.png";
-import auth from "../public/skills//auth0.png";
-import dot from "../public/skills//dotenb.png";
-import github from "../public/skills//github.png";
-import css from "../public/skills//css.png";
-import javas from "../public/skills//javascript.png";
-import nextjs from "../public/skills//nextjs.png";
-import node from "../public/skills//node.png";
-import tailw from "../public/skills//tailwind.png";
-import mongo from "../public/skills//mongo.png";
-import git from "../public/skills//git.png";
-import express from "../public/skills//express.png";
 import prog from "../public/writingcode.jpg";
 import Contact from "./contact";
 
@@ -40,88 +25,6 @@ export const item = {
     scale: 1,
   },
 };
-
-const skills = [
-  {
-    skill: "HTML",
-    src: html,
-    id: "html",
-  },
-  {
-    skill: "CSS",
-    src: css,
-    id: "css",
-  },
-  {
-    skill: "Javascript",
-    src: javas,
-    id: "js",
-  },
-  {
-    skill: "React",
-    src: reacti,
-    id: "react",
-  },
-  {
-    skill: "Next js",
-    src: nextjs,
-    id: "next",
-  },
-  {
-    skill: "Node",
-    src: node,
-    id: "node",
-  },
-  {
-    skill: "Mongodb",
-    src: mongo,
-    id: "mongo",
-  },
-  {
-    skill: "Express",
-    src: express,
-    id: "express",
-  },
-  {
-    skill: "Mysql",
-    src: mySQL,
-    id: "mysql",
-  },
-
-  {
-    skill: "Bootstrap",
-    src: bootstrap,
-    id: "bs",
-  },
-  {
-    skill: "Tailwind CSS",
-    src: tailw,
-    id: "tw",
-  },
-  {
-    skill: "Auth0",
-    src: auth,
-    id: "auth",
-  },
-
-  {
-    skill: "Git",
-    src: git,
-    id: "git",
-  },
-
-  {
-    skill: "Github",
-    src: github,
-    id: "gith",
-  },
-
-  {
-    skill: "DorEnv",
-    src: dot,
-    id: "dot",
-  },
-];
 
 export default function Index() {
   const ref = useRef(null);

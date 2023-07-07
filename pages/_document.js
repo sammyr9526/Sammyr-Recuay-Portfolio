@@ -22,7 +22,7 @@ export default function Document() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <body>
+      <body className="main-body">
         <Main />
         <NextScript />
       </body>
