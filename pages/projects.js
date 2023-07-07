@@ -2,7 +2,7 @@ import Layout from "../components/layout";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { container, item } from "../pages/index";
-import { projects } from "./helpers";
+import { projects } from "../helpers/helpers";
 
 const Projects = () => (
   <>

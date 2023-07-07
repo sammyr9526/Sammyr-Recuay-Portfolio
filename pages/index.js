@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { projects as proj, skills } from "./helpers";
+import { projects as proj, skills } from "../helpers/helpers";
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import prog from "../public/writingcode.jpg";
