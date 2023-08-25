@@ -20,7 +20,6 @@ export const container = {
 export const item = {
   hidden: { opacity: 0, scale: 0 },
   show: {
-    whileInView: 1,
     opacity: 1,
     scale: 1,
   },
@@ -35,9 +34,8 @@ export default function Index() {
       animation.start({
         x: 0,
         transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
+          type: "just",
+          duration: 1.25,
         },
       });
     }
@@ -50,19 +48,31 @@ export default function Index() {
   return (
     <>
       {/* ABOUT */}
-      <motion.div
-        className="container text-center "
-        ref={ref}
-        animate={animation}
-      >
+      <motion.div className="container text-center">
         <h3>About Me</h3>
         <div className="row mt-5 px-4 mx-auto about ">
           <div className="col-md-7 ">
-            <h1 className="fw-bolder">
+            <motion.h1
+              className="fw-bolder"
+              initial={{ x: 75, y: -100 }}
+              animate={{ x: 0, y: 0 }}
+              transition={{
+                duration: 1.5,
+              }}
+            >
               <code className="text-dark"> Hello World</code>
-            </h1>
+            </motion.h1>
 
-            <p className="about_p">
+            <motion.p
+              className="about_p"
+              ref={ref}
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              transition={{
+                type: "just",
+                duration: 1.25,
+              }}
+            >
               I'm Sammyr Recuay, a web developer from Peru. I'm very curious and
               passionate about everything related to computers and technology.
               <br />
@@ -70,16 +80,26 @@ export default function Index() {
               Currently i am using MERN stack to develop but not restricted to
               it. I always love exploring and learning new technologies to
               improve my skills
-            </p>
+            </motion.p>
           </div>
-          <div className="col-md-5 d-flex justify-content-center prog_img  ">
+          <motion.div
+            className="col-md-5 d-flex justify-content-center prog_img  "
+            animate={{
+              scale: [1, 1.2, 1, 1.2, 1],
+              rotate: [0, 0, 270, 270, 0],
+              x: 0,
+              y: 0,
+            }}
+            initial={{ x: [120, 70, -200, -300], y: [-50, -250] }}
+            transition={{ duration: 1.75, times: 3, type: "spring" }}
+          >
             <Image
               src={prog}
               className="img-fluid rounded-circle"
               width={350}
               height={350}
             />
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 
@@ -87,7 +107,7 @@ export default function Index() {
       <div className=" container skills ">
         <h3 className="mb-5 text-center">Skills</h3>
 
-        <motion.div className="row text-center grid justify-content-center     ">
+        <motion.div className="row text-center grid justify-content-center">
           {skills.map(({ skill, src, id }) => (
             <motion.div
               className="col-lg-3  me-3 col-4  mb-5 me-3 ms-3 logo"
@@ -95,7 +115,8 @@ export default function Index() {
               key={id}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.25 }}
             >
               <motion.div whileHover={{ scale: 1.2 }}>
                 <Image src={src} alt="img" width={70} height={80} />
@@ -113,7 +134,7 @@ export default function Index() {
           <div className="col-md-14 mt-5 ">
             <motion.div
               whileInView="show"
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="row text-center justify-content-center "
               variants={container}
               initial="hidden"
@@ -131,7 +152,7 @@ export default function Index() {
                         {pill.map((e) => (
                           <div className="d-inline-flex" key={e}>
                             <button
-                              className=" btn btn-primary btn-sm ms-1 me-1 mb-3   "
+                              className=" card_skill btn-sm ms-1 me-1 mb-3"
                               disabled
                             >
                               {e}
@@ -143,14 +164,14 @@ export default function Index() {
                         <div className="align-self-end">
                           <a
                             href={web}
-                            className="btn btn-outline-dark me-2 shadow-none"
+                            className="btn card_btn me-2"
                             target={"_blank"}
                           >
                             web
                           </a>
                           <a
                             href={git}
-                            className="btn btn-outline-dark ms-2 shadow-none"
+                            className="btn card_btn ms-2 "
                             target={"_blank"}
                           >
                             github
@@ -163,13 +184,15 @@ export default function Index() {
               ))}
             </motion.div>
 
-            <div className=" text-center">
-              <a
+            <div className=" text-center ">
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
                 href="/projects"
-                className=" btn btn-outline-dark btn-lg shadow-none   "
+                className=" btn card_btn btn-lg shadow-none   "
               >
                 More Projects
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>

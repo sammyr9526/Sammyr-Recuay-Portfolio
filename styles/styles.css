@@ -55,6 +55,7 @@ body {
 }
 .about_p {
   font-size: 20px;
+  color: rgb(243, 236, 236);
 }
 
 code {
@@ -150,10 +151,6 @@ code {
   box-shadow: 0 3px 4px 0 rgb(211, 71, 16);
 }
 
-.card {
-  outline: 0.1em solid rgb(134, 125, 125);
-}
-
 .overflow .card-img-top {
   transform: scale(1);
   transition: all 0.2s ease-in-out;
@@ -162,6 +159,16 @@ code {
 .overflow .card-img-top:hover {
   transform: scale(1.15);
   overflow: hidden;
+}
+.card_skill {
+  box-shadow: 0px 0px 2px rgb(148, 62, 126);
+  background-color: rgba(187, 42, 255, 0.616);
+  color: rgb(245, 232, 232);
+}
+.card_btn {
+  box-shadow: 0px 0px 6px rgb(97, 88, 88);
+  background-color: rgba(66, 63, 63, 0.616);
+  outline: 0.1em solid rgb(102, 95, 95);
 }
 
 #contact {

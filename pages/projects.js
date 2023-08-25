@@ -1,4 +1,3 @@
-import Layout from "../components/layout";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { container, item } from "../pages/index";
@@ -30,12 +29,12 @@ const Projects = () => (
               >
                 <div className="card">
                   <Image src={src} alt="img" className="card-img-top" />
-                  <div className="card-body">
+                  <div className="card-body ">
                     <div className=" h-50  ">
                       {pill.map((e) => (
                         <div className="d-inline-flex" key={e}>
                           <button
-                            className=" btn btn-primary btn-sm ms-1 me-1 mb-3"
+                            className=" card_skill btn-sm ms-1 me-1 mb-3"
                             disabled
                           >
                             {e}
@@ -47,14 +46,14 @@ const Projects = () => (
                       <div className="align-self-end">
                         <a
                           href={web}
-                          className="btn btn-outline-dark me-2 shadow-none"
+                          className="btn me-2 card_btn "
                           target={"_blank"}
                         >
                           web
                         </a>
                         <a
                           href={git}
-                          className="btn btn-outline-dark ms-2 shadow-none"
+                          className="btn card_btn ms-2 "
                           target={"_blank"}
                         >
                           github

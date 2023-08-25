@@ -2,32 +2,35 @@ import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 export default function Contact() {
-  const ref2 = useRef(null);
-  const inView2 = useInView(ref2);
-  const animation2 = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  const animation = useAnimation();
   useEffect(() => {
-    if (inView2) {
-      animation2.start({
+    if (inView) {
+      animation.start({
         x: 0,
+        opacity: 1,
         transition: {
           type: "spring",
-          duration: 2,
+          duration: 4,
           bounce: 0.3,
         },
       });
     }
-    if (!inView2) {
-      animation2.start({
+    if (!inView) {
+      animation.start({
+        opacity: 0,
         x: "-100%",
       });
     }
-  }, [inView2]);
+  }, [inView]);
   return (
     <motion.div
       className="container"
-      ref={ref2}
-      animate={animation2}
+      ref={ref}
+      animate={animation}
       id="contact"
+      viewport={{ once: true }}
     >
       <div className="row justify-content-center text-center ">
         <h3>Contact Me</h3>

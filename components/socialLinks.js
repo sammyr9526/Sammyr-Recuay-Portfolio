@@ -39,8 +39,9 @@ const social = [
         Resume <BsFillPersonLinesFill size={30} className=" " />
       </>
     ),
-    href: "https://linkedin.com",
+    href: "./sammyr_recuay_resume.pdf",
     style: "border-top: 6px",
+    download: true,
   },
 ];
 
@@ -48,7 +49,7 @@ const SocialLinks = () => {
   return (
     <div className=" d-none d-lg-block social ">
       <ul>
-        {social.map(({ id, child, href, style }) => (
+        {social.map(({ id, child, href, style, download }) => (
           <li
             key={id}
             className={"social_li d-flex w-100 bg-light " + "" + style}
@@ -57,6 +58,7 @@ const SocialLinks = () => {
               href={href}
               className="social_a justify-content-between  w-100 text-white "
               target={"_blank"}
+              download={download}
             >
               {child}
             </a>

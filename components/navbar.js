@@ -1,12 +1,15 @@
 import Link from "next/link";
+import { useState } from "react";
+import { navlinks } from "../helpers/helpers";
 
 const Navbar = () => {
+  const [selectedNav, setSelectedNav] = useState("Home");
   return (
     <nav className="navigation navbar navbar-expand-lg navbar-dark bg-dark  ">
       <div className="container-fluid ">
-        <a className="navbar-brand ms-4 fs-4 " href="#">
-          Sammyr Recuay
-        </a>
+        <Link href="/">
+          <a className="navbar-brand ms-4 fs-4 ">Sammyr Recuay</a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,23 +23,19 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse  " id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto ">
-            <li className="nav-item  ">
-              <Link href="/">
-                <a className="link fw-bolder" aria-current="page">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="nav-item  ">
-              <Link href="/projects">
-                <a className="link fw-bolder">Projects</a>
-              </Link>
-            </li>
-            <li className="nav-item  ">
-              <Link href="/contact">
-                <a className="link fw-bolder ">Contact</a>
-              </Link>
-            </li>
+            {navlinks.map((item) => (
+              <li
+                className="nav-item"
+                key={item.title}
+                onClick={() => setSelectedNav(item.title)}
+              >
+                <Link href={item.url}>
+                  <a className="link fw-bolder" aria-current="page">
+                    {item.title}
+                  </a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
