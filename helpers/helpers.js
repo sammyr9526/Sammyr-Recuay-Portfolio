@@ -31,7 +31,9 @@ import tailw from "../public/skills//tailwind.png";
 import mongo from "../public/skills//mongo.png";
 import git from "../public/skills//git.png";
 import express from "../public/skills//express.png";
+import typescript from "../public/skills//typescript.png";
 
+//objects
 export const projects = [
   {
     web: "https://genius-ai-sammyr9526.vercel.app/",
@@ -186,6 +188,12 @@ export const skills = [
     src: node,
     id: "node",
   },
+
+  {
+    skill: "Typescript",
+    src: typescript,
+    id: "ts",
+  },
   {
     skill: "Mongodb",
     src: mongo,
@@ -251,3 +259,69 @@ export const navlinks = [
     url: "/contact",
   },
 ];
+
+export const sampleProjects = projects.slice(0, 6);
+
+//Animations
+export const TransAnimation = {
+  hidden: { scale: 2, y: 500 },
+  show: { scale: 3, y: -2000 },
+  hide: { scale: 2, y: 1200 },
+};
+
+export const container = {
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+export const item = {
+  hidden: {
+    opacity: 0,
+    scale: 0.75,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  hide: {
+    opacity: 0,
+    scale: 0.75,
+    transition: {
+      duration: 0.75,
+    },
+  },
+};
+
+export const skillsContainer = {
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+export const skillItem = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  hide: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};

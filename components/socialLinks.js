@@ -1,8 +1,8 @@
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
-const social = [
+export const social = [
   {
     id: 1,
     child: (

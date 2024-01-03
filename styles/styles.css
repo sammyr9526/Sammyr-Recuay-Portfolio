@@ -17,7 +17,47 @@ body {
 .container {
   margin-top: 75px;
 }
+.slide-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: rgb(80, 76, 82);
+  transform-origin: bottom;
+}
 
+.slide-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: rgba(80, 76, 82);
+  transform-origin: top;
+}
+
+.transition {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgb(130, 39, 175) 10%,
+
+    rgb(176, 85, 221) 5%,
+
+    rgb(155, 16, 224) 70%,
+
+    rgb(91, 30, 121) 1%,
+
+    rgb(183, 42, 253) 2%
+  );
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+}
 .navigation {
   position: fixed;
   top: 0;
@@ -50,7 +90,11 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.about {
+
+.about_title {
+  color: rgb(126 53 160);
+}
+.about_container {
   text-align: start;
 }
 .about_p {
@@ -95,6 +139,9 @@ code {
   color: black;
 }
 
+/* .text-title {
+}
+ */
 .logo {
   border-radius: 0.4em;
 }
@@ -151,6 +198,10 @@ code {
   box-shadow: 0 3px 4px 0 rgb(211, 71, 16);
 }
 
+#ts {
+  box-shadow: 0 3px 4px 0 rgb(14, 106, 226);
+}
+
 .overflow .card-img-top {
   transform: scale(1);
   transition: all 0.2s ease-in-out;
@@ -169,6 +220,11 @@ code {
   box-shadow: 0px 0px 6px rgb(97, 88, 88);
   background-color: rgba(66, 63, 63, 0.616);
   outline: 0.1em solid rgb(102, 95, 95);
+}
+
+.projects_btn:hover{
+  background-color: rgba(187, 42, 255, 0.616);
+  color:#fff;
 }
 
 #contact {

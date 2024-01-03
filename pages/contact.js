@@ -12,7 +12,7 @@ export default function Contact() {
         opacity: 1,
         transition: {
           type: "spring",
-          duration: 4,
+          duration: 4.5,
           bounce: 0.3,
         },
       });
