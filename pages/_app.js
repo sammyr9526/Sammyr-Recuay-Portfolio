@@ -1,7 +1,7 @@
 import "bootswatch/dist/cyborg/bootstrap.min.css";
 import "../styles/styles.css";
 import Head from "next/head";
-import Layout from "../components/PageLayout";
+import Layout from "../components/layout";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 import { TransAnimation } from "../helpers/helpers";

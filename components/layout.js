@@ -1,6 +1,6 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import SocialLinks from "./SocialSideBar";
+import Footer from "./footer";
+import Navbar from "./navbar";
+import SocialLinks from "./socialSideBar";
 const Layout = ({ children }) => (
   <>
     <Navbar />
