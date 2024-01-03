@@ -1,6 +1,6 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "./SocialSideBar";
 const Layout = ({ children }) => (
   <>
     <Navbar />
