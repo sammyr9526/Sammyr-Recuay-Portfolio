@@ -222,9 +222,9 @@ code {
   outline: 0.1em solid rgb(102, 95, 95);
 }
 
-.projects_btn:hover{
-  background-color: rgba(187, 42, 255, 0.616);
-  color:#fff;
+.projects_btn:hover {
+  background-color: rgba(187, 42, 255, 0.616) !important;
+  color: #fff !important;
 }
 
 #contact {
