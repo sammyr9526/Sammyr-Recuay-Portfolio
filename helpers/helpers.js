@@ -51,7 +51,7 @@ export const projects = [
   },
 
   {
-    web: "https://tech-store.cyclic.app/",
+    web: "https://techstore-sssj.onrender.com/",
     git: "https://github.com/sammyr9526/Techstore",
     src: techstore,
     pill: ["Express", "MongoDB", "Handlebars", "JWT", "Tailwind", "Bcrypt"],
@@ -70,7 +70,7 @@ export const projects = [
     pill: ["HTML", "CSS", "React", "Firebase", "Tailwind"],
   },
   {
-    web: "https://mongo-tasks-crud.cyclic.app/",
+    web: "https://tasks-crud-node-mongodb.onrender.com/",
     git: "https://github.com/sammyr9526/Tasks-crud-node-mongodb",
     src: task_mongo,
     pill: ["HTML", "MongoDB", "Express", ".ENV", "Bootstrap"],
@@ -82,7 +82,7 @@ export const projects = [
     pill: ["React", "Javascript", "CSS"],
   },
   {
-    web: "https://beststore.cyclic.app/",
+    web: "https://beststore-paypal-backend.onrender.com/",
     git: "https://github.com/sammyr9526/BestStore-paypal",
     src: paypal,
     pill: ["HTML", ".ENV", "Express", "Paypal", "Bootstrap"],

@@ -3,12 +3,15 @@ import { FiMail } from "react-icons/fi";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 
 const Footer = () => {
+  const d = new Date();
+  let year = d.getFullYear();
+
   return (
     <footer className="text-center bg-light text-white foot d-flex justify-content-between">
       <div className="d-flex foot-p mb-1  ">
         <p className="ms-2 ">
           <AiOutlineCopyrightCircle size={17} className="mb-1 me-1" />
-          2023. Sammyr Recuay Parra
+          {year}. Sammyr Recuay Parra
         </p>
       </div>
       <div className=" foot-links justify-content-center">
